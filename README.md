@@ -3,7 +3,11 @@
 
 
 1.下载到本地
+
 2.导入maven project 到IDE
+
 3.修改数据库连接
+
 4.加入到Tomcat中运行起来。
+
 5.运行URL http://localhost:8080/myblog/view/index
