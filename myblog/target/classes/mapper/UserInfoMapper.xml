@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<!-- 这个namespace可以理解是调用sql方法的一个执行类 -->
+<mapper namespace="com.sun.dao.LoginDao">
+      <!-- 这里是完成映射。type里面是映射的实体 column里面是这个实体里面和property表字段想对应的属性 -->
+    <resultMap type="com.sun.entity.UserInfo" id="userMap">
+        <id property="id" column="id"  jdbcType="DECIMAL"/>
+        <result property="username" column="username" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="getUser" parameterType="int" resultMap="userMap">
+        select * from userinfo where id=#{id}
+    </select>
+    
+    <select id="getUserName" parameterType="String" resultMap="userMap">
+        select * from userinfo where username=#{userName}
+    </select>
+    
+    
+    
+   <insert id="InsertUser" parameterType="map">
+    INSERT INTO userinfo (id,username) VALUES ('3',#{userName})
+   
+   </insert>
+   
+</mapper>

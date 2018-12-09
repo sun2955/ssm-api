@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<ver0.6>
+	<file>spring-mvc-servlet.xml</file>
+	<file>SecurityInterceptor.java</file>
+	<content>更加登录拦截器，**.do 的文件被拦截 。拦截未登录的用户，跳转到指定的 登录页面去登录</content>
+	</ver0.6>
+	<ver0.7>
+	<file>mybatis-generator-config.xml</file>
+	<file>MybatisGenerator.java</file>
+	<content>mybatis代码自动生成工具 初级版</content>
+	</ver0.7>
+	<ver0.8>
+	<file>log4j.xml</file>
+	<content>修改log路径执行tomcat的log下</content>
+	</ver0.8>
+</list>

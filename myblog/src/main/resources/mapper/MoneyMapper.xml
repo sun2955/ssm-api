@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<!-- 这个namespace可以理解是调用sql方法的一个执行类 -->
+<mapper namespace="com.sun.dao.MoneyDao">
+      <!-- 这里是完成映射。type里面是映射的实体 column里面是这个实体里面和property表字段想对应的属性 -->
+       <resultMap type="com.sun.entity.MoneyInfo" id="moneyMap">
+        <id property="id" column="id"  jdbcType="DECIMAL"/>
+        <result property="money" column="money" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="getmoney" parameterType="int" resultMap="moneyMap">
+        select money from moneyinfo where id=#{id}
+    </select>
+    
+   <insert id="InsertMony" parameterType="int">
+    INSERT INTO moneyinfo (money) VALUES (#{money})
+   
+   </insert>
+    
+</mapper>
